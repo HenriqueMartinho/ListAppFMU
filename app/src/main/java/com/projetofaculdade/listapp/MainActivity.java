@@ -11,10 +11,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private SQLiteDatabase db;
     BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.home);
+
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
@@ -38,4 +41,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
+//    public void onResume(){
+//        super.onResume();
+//    }
+
 }

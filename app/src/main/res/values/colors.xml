@@ -9,4 +9,6 @@
     <color name="colorPrimaryIcons">#FFFFFF</color>
     <color name="colorPrimaryDarker">#AC8227</color>
 
+    <color name="textPrimaryColor">#252525</color>
+
 </resources>

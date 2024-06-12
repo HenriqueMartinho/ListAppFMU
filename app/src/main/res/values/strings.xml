@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ListApp</string>
+    <string name="list_title">NEW LIST</string>
 </resources>

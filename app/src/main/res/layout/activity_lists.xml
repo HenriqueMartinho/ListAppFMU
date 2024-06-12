@@ -38,21 +38,23 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.16" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/listToolbar"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewList"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryBars"
-        app:layout_constraintBaseline_toTopOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="@color/colorPrimaryBars"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/list_toolbar_top">
-    </androidx.appcompat.widget.Toolbar>
+        app:maxImageSize="36dp" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryBackground"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-16dp">
 
@@ -77,24 +79,29 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="52dp"
+        android:background="@color/colorPrimaryBackground"
         app:layout_constraintBottom_toBottomOf="@+id/coordinatorLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/listToolbar">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addNewList"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/colorPrimaryBars"
-            android:src="@drawable/baseline_add_24"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView"
-            app:layout_constraintEnd_toEndOf="@+id/scrollView"
-            app:layout_constraintStart_toStartOf="@+id/scrollView"
-            app:layout_constraintTop_toTopOf="@+id/scrollView"
-            app:maxImageSize="36dp" />
+            android:orientation="vertical">
+
+        </LinearLayout>
     </ScrollView>
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/listToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryBars"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </androidx.appcompat.widget.Toolbar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,6 @@
         android:icon="@drawable/baseline_home_24"/>
     <item
         android:id="@+id/charts"
-        android:title="Charts"
-        android:icon="@drawable/baseline_bar_chart_24"/>
+        android:title="Charts" />
 
 </menu>
